@@ -12,6 +12,6 @@ public class AddTwoNum {
 		int sum = num1 + num2;
 		System.out.print("result is :"+sum);
 
-	}
-
+	num.close();
+	}	
 }
