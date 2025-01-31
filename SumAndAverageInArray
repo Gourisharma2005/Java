@@ -19,7 +19,7 @@ public static void main(String[] args) {
 	}
 	int sum = sum(arr);
 	System.out.println("sum is = "+sum);
-	int average = average(arr,sum);
+	double average = average(arr,sum);
 	System.out.println("Average is = "+average);
 	input.close();
 }
@@ -33,8 +33,8 @@ public static int sum(int[] arr) {
 	}
 	return sum;
 }
-public static int average(int[] arr,int sum) {
-	int average = sum/arr.length;
+public static double average(int[] arr,int sum) {
+	double average = sum/arr.length;
 	
 	return average;
 }
