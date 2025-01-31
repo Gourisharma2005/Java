@@ -1,0 +1,37 @@
+//number of occurence of an element in an array?
+
+package basicJava;
+
+import java.util.Scanner;
+
+public class ArrayNumOfOccurence {
+public static void main(String[] args) {
+	Scanner input = new Scanner(System.in);
+	System.out.print("enter number of elements = ");
+	int size = input.nextInt();
+	int[] arr = new int[size];
+	int i = 0;
+	while(i<arr.length) {
+		System.out.print("enter element "+(i+1)+": ");
+		arr[i] = input.nextInt();
+		i++;
+	}
+	System.out.print("enter the number = ");
+	int num = input.nextInt();
+	int occurence = noOfOccurence(arr,num);
+	System.out.print("number of occurence is "+occurence);
+	input.close();
+}
+public static int noOfOccurence(int[] arr,int num ) {
+	int occurence = 0;
+	int i = 0;
+	while(i<arr.length) {
+		if(arr[i]==num) {
+			 occurence++;
+		}
+		i++;
+	}
+	return  occurence;
+}
+}
+
