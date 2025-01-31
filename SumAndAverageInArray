@@ -1,0 +1,41 @@
+//find the sum and average of an array
+
+package basicJava;
+
+import java.util.Scanner;
+
+public class SumAndAverageInArray {
+public static void main(String[] args) {
+	Scanner input = new Scanner(System.in); 
+	System.out.println("enter number of elements = ");
+	int size = input.nextInt();
+	int[] arr = new int[size];
+	System.out.println("enter your array");
+	int i = 0;
+	while(i<arr.length) {
+		System.out.println("enter element number "+(i+1)+": ");
+		arr[i] = input.nextInt();
+		i++;
+	}
+	int sum = sum(arr);
+	System.out.println("sum is = "+sum);
+	int average = average(arr,sum);
+	System.out.println("Average is = "+average);
+	input.close();
+}
+
+public static int sum(int[] arr) {
+	int sum = 0;
+	int i = 0;
+	while(i<arr.length) {
+		sum+=arr[i];
+		i++;
+	}
+	return sum;
+}
+public static int average(int[] arr,int sum) {
+	int average = sum/arr.length;
+	
+	return average;
+}
+}
